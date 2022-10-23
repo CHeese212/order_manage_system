@@ -15,3 +15,7 @@ function page(pageNo) {
 function returnIndex() {
     window.location.href = "/";
 }
+
+function linkGitHub() {
+    window.location.href = "https://github.com/July-66/order_manage_system";
+}

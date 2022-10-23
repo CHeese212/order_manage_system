@@ -5,7 +5,6 @@ import com.cheese.order_manage_system.pojo.OrderTable;
 import com.cheese.order_manage_system.pojo.request.OrderAddRequest;
 import com.cheese.order_manage_system.pojo.request.OrderEditRequest;
 import com.cheese.order_manage_system.service.OrderTableService;
-import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,8 +17,12 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Order表的Controller
+ *
+ * @author July
+ */
 @Controller
-@Slf4j
 public class OrderController {
     @Resource
     OrderTableService orderTableService;
@@ -43,8 +46,8 @@ public class OrderController {
         return "edit_order";
     }
 
-    @GetMapping( "/searchByName")
-    public String searchByCommodityName(HttpServletRequest request, @RequestParam(required = false) String commodityName,Integer pageNum) {
+    @GetMapping("/searchByName")
+    public String searchByCommodityName(HttpServletRequest request, @RequestParam(required = false) String commodityName, Integer pageNum) {
         if (pageNum == null) {
             pageNum = 1;
         }

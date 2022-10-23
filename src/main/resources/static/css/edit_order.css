@@ -12,7 +12,7 @@ body {
 }
 
 #div_order_container {
-    background-color: darkgray;
+    background-color: #f0f2f5;
     height: 850px;
     width: 1680px;
     position: relative;
@@ -40,4 +40,20 @@ body {
 .del_class {
     width: 30px;
     height: 30px;
+}
+
+#footer {
+    position: absolute;
+    text-align: center;
+    font-size: 14px;
+    color: #848587;
+    top: 793px;
+    width: 1680px;
+}
+
+#github_img_div {
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    margin: auto;
 }

@@ -4,7 +4,7 @@ body {
 }
 
 #div_container {
-    background-color: darkgray;
+    background-color: #f0f2f5;
     height: 850px;
     width: 1680px;
     position: relative;
@@ -117,4 +117,18 @@ a:active {
 #search_by_buyer {
     float: left;
     margin-bottom: 10px;
+}
+
+#footer {
+    text-align: center;
+    margin-top: 770px;
+    font-size: 14px;
+    color: #848587;
+}
+
+#github_img_div {
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    margin: auto;
 }

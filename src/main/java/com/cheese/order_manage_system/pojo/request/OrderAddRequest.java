@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 /**
  * 添加订单请求类
  *
- * @author cheese
+ * @author July
  */
 @Data
 public class OrderAddRequest implements Serializable {

@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 import java.util.List;
 
 /**
- * @author cheese
+ * @author July
  * @description 针对表【order_table(订单)】的数据库操作Service
  * @createDate 2022-10-19 13:01:03
  */
@@ -63,6 +63,7 @@ public interface OrderTableService extends IService<OrderTable> {
 
     /**
      * 根据id修改订单
+     *
      * @param order 修改后的订单对象
      * @return boolean表示是否删除成功
      * @author cheese

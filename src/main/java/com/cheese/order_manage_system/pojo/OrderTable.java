@@ -5,13 +5,16 @@ import com.baomidou.mybatisplus.annotation.*;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
+
 import lombok.Data;
 
 /**
  * 订单
+ *
+ * @author July
  * @TableName order_table
  */
-@TableName(value ="order_table")
+@TableName(value = "order_table")
 @Data
 public class OrderTable implements Serializable {
     /**
