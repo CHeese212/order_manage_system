@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <title>EditOrder</title>
     <link rel="stylesheet" th:href="@{/css/edit_order.css}"/>
+    <script type="text/javascript" th:src="@{/js/index.js}"></script>
 </head>
 <body>
 <div id="div_order_container">
+    <input type="button" value="返回订单列表首页" th:onclick="returnIndex()">
     <div id="div_order_edit">
         <p class="center f30">编辑订单信息</p>
         <form th:action="@{/edit}" method="post"  th:object="${order}">

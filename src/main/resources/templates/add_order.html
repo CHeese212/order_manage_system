@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <title>AddOrder</title>
     <link rel="stylesheet" th:href="@{/css/add_order.css}"/>
+    <script type="text/javascript" th:src="@{/js/index.js}"></script>
 </head>
 <body>
 <div id="div_order_container">
+    <input type="button" value="返回订单列表首页" th:onclick="returnIndex()">
     <div id="div_order_add">
         <p class="center f30">添加订单</p>
         <form th:action="@{/add}" method="post">
