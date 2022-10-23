@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>EditOrder</title>
+    <link rel="stylesheet" th:href="@{/css/edit_order.css}"/>
+</head>
+<body>
+<div id="div_order_container">
+    <div id="div_order_edit">
+        <p class="center f30">编辑订单信息</p>
+        <form th:action="@{/edit}" method="post"  th:object="${order}">
+            <input type="hidden" name="id" th:value="*{id}"/>
+            <table id="table_order_info">
+                <tr>
+                    <th>商品名称:</th>
+                    <td><input type="text" name="commodityName" th:value="*{commodityName}"/></td>
+                </tr>
+                <tr>
+                    <th>订购数量:</th>
+                    <td><input type="text" name="orderNumber" th:value="*{orderNumber}"/></td>
+                </tr>
+                <tr>
+                    <th>商品单价:</th>
+                    <td><input type="text" name="commodityPrice" th:value="*{commodityPrice}"/></td>
+                </tr>
+                <tr>
+                    <th>卖家:</th>
+                    <td><input type="text" name="seller" th:value="*{seller}"/></td>
+                </tr>
+                <tr>
+                    <th>买家:</th>
+                    <td><input type="text" name="buyer" th:value="*{buyer}"/></td>
+                </tr>
+                <tr>
+                    <th colspan="2"><input type="submit" value="修改"></th>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cheese.order_manage_system.mapper.OrderTableMapper">
+
+    <resultMap id="BaseResultMap" type="com.cheese.order_manage_system.pojo.OrderTable">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="commodityName" column="commodity_name" jdbcType="VARCHAR"/>
+            <result property="orderNumber" column="order_number" jdbcType="INTEGER"/>
+            <result property="commodityPrice" column="commodity_price" jdbcType="DECIMAL"/>
+            <result property="seller" column="seller" jdbcType="VARCHAR"/>
+            <result property="buyer" column="buyer" jdbcType="VARCHAR"/>
+            <result property="totalPrice" column="total_price" jdbcType="DECIMAL"/>
+            <result property="createtime" column="createTime" jdbcType="TIMESTAMP"/>
+            <result property="updatetime" column="updateTime" jdbcType="TIMESTAMP"/>
+            <result property="isdelete" column="isDelete" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,commodity_name,order_number,
+        commodity_price,seller,buyer,
+        total_price,createTime,updateTime,
+        isDelete
+    </sql>
+</mapper>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>OrderMenageSystem</title>
+    <link rel="stylesheet" th:href="@{/css/order_list.css}">
+    <script type="text/javascript" th:src="@{/js/index.js}"></script>
+</head>
+<body>
+<div id="div_container">
+    <input type="button" value="返回订单列表首页" th:onclick="returnIndex()">
+    <div id="div_search">
+        <form method="get" th:action="@{/searchById}" id="search_by_id">
+            请输入商品id：  <input type="text" name = "id" /> <input type="submit" value="根据id查询">
+        </form>
+        <form method="get" th:action="@{/searchByName}" id="search_by_name">
+            请输入商品名称：<input type="text" name = "commodityName" /> <input type="submit" value="根据商品名称查询">
+        </form>
+        <form method="get" th:action="@{/searchByBuyer}" id="search_by_buyer">
+            请输入买家姓名：<input type="text" name = "buyer" /> <input type="submit" value="根据买家姓名查询">
+        </form>
+    </div>
+    <div id = "div_order_op">
+        <input type="button" value="首页" th:onclick="|page(1)|" th:disabled="${!session.orderPage.hasPrevious()}"/>
+        <input type="button" value="上一页" th:onclick="|page(${session.orderPage.getCurrent() - 1})|" th:disabled="${!session.orderPage.hasPrevious()}"/>
+        <input type="button" value="下一页 " th:onclick="|page(${session.orderPage.getCurrent() + 1})|" th:disabled="${!session.orderPage.hasNext()}"/>
+        <input type="button" value="尾页" th:onclick="|page(${session.orderPage.getPages()})|" th:disabled="${!session.orderPage.hasNext()}"/>
+        <input type="button" value="添加订单" th:onclick="|linkAddOrder()|"/>
+    </div>
+
+    <div id="div_order_list">
+        <p class="center f30">欢迎使用订单管理系统</p>
+        <table id="table_order_list">
+            <tr>
+                <th>订单编号</th>
+                <th>商品名称</th>
+                <th>订购数量</th>
+                <th>商品单价</th>
+                <th>卖家</th>
+                <th>买家</th>
+                <th>总价</th>
+                <th>订单日期</th>
+                <th>操作</th>
+            </tr>
+
+            <tr th:unless="${#lists.isEmpty(session.orders)}" th:each="order : ${session.orders}">
+                <td><a th:href="@{'/edit?id=' + ${order.id}}" th:text="${order.id}"></a></td>
+                <td th:text="${order.commodityName}"></td>
+                <td th:text="${order.orderNumber}"></td>
+                <td th:text="${order.commodityPrice}"></td>
+                <td th:text="${order.seller}"></td>
+                <td th:text="${order.buyer}"></td>
+                <td th:text="${order.totalPrice}"></td>
+                <td th:text="${order.orderTime}"></td>
+                <!--被||括起来的thymeleaf语句会自动识别字符串和变量-->
+                <td><img th:src="@{/images/del.jpg}" alt="del" class="del_class" th:onclick="|delOrder(${order.id})|"/></td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>

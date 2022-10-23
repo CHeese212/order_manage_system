@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>AddOrder</title>
+    <link rel="stylesheet" th:href="@{/css/add_order.css}"/>
+</head>
+<body>
+<div id="div_order_container">
+    <div id="div_order_add">
+        <p class="center f30">添加订单</p>
+        <form th:action="@{/add}" method="post">
+            <table id="table_order_info">
+                <tr>
+                    <th>商品名称:</th>
+                    <td><input type="text" name="commodityName"/></td>
+                </tr>
+                <tr>
+                    <th>订购数量:</th>
+                    <td><input type="text" name="orderNumber"/></td>
+                </tr>
+                <tr>
+                    <th>商品单价:</th>
+                    <td><input type="text" name="commodityPrice"/></td>
+                </tr>
+                <tr>
+                    <th>卖家:</th>
+                    <td><input type="text" name="seller"/></td>
+                </tr>
+                </tr>
+                <tr>
+                    <th>买家:</th>
+                    <td><input type="text" name="buyer"/></td>
+                </tr>
+                <tr>
+                    <th colspan="2"><input type="submit" value="添加"></th>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
+</body>
+</html>

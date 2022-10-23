@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.f30 {
+    font-size: 30px;
+}
+
+.center {
+    text-align: center;
+}
+
+#div_order_container {
+    background-color: darkgray;
+    height: 850px;
+    width: 1680px;
+    position: relative;
+    top: 80px;
+    left: 110px;
+}
+
+#div_order_edit {
+    position: absolute;
+    left: 340px;
+    bottom: 600px;
+}
+
+#table_order_info {
+    height: 200px;
+    width: 1000px;
+    position: absolute;
+}
+
+#table_order_info, #table_order_info td, #table_order_info th {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.del_class {
+    width: 30px;
+    height: 30px;
+}
