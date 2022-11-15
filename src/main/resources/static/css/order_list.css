@@ -5,24 +5,23 @@ body {
 
 #div_container {
     background-color: #f0f2f5;
-    height: 850px;
-    width: 1680px;
+    width: 100%;
+    height: 760px;
+    margin: 0 auto;
     position: relative;
-    top: 80px;
-    left: 110px;
+    /*top: 80px;*/
+    /*left: 110px;*/
 }
 
 #div_order_list {
     width: 1000px;
-    height: 200px;
-    position: absolute;
-    left: 340px;
-    bottom: 600px;
+    height: 300px;
+    margin: 50px auto 100px auto;
 }
 
 #table_order_list {
     width: 1000px;
-    height: 200px;
+    height: 300px;
     text-align: center;
 }
 
@@ -38,20 +37,6 @@ body {
 .del_class {
     width: 30px;
     height: 30px;
-}
-
-#div_add_order {
-    height: 200px;
-    width: 1000px;
-    position: absolute;
-    left: 340px;
-}
-
-#table_add_order, #table_add_order td, #table_add_order tr {
-    border-width: 1px;
-    border-style: solid;
-    border-collapse: collapse;
-    text-align: center;
 }
 
 .f30 {
@@ -90,23 +75,18 @@ a:active {
 #div_order_op {
     width: 1000px;
     text-align: center;
-    position: absolute;
-    top: 550px;
-    left: 340px;
+    margin: 0 auto;
 }
 
 #div_search {
     width: 450px;
-    text-align: center;
-    position: absolute;
-    top: 420px;
-    left: 340px;
+    overflow: hidden;
+    margin: 0 auto 20px auto;
 }
 
 #search_by_id {
     float: left;
     margin-bottom: 10px;
-    margin-left: 13px;
 }
 
 #search_by_name {
@@ -120,8 +100,11 @@ a:active {
 }
 
 #footer {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -54px;
     text-align: center;
-    margin-top: 770px;
     font-size: 14px;
     color: #848587;
 }
