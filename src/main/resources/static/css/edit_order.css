@@ -3,6 +3,10 @@ body {
     padding: 0;
 }
 
+img {
+    cursor: pointer;
+}
+
 .f30 {
     font-size: 30px;
 }

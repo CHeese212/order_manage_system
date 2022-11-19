@@ -3,6 +3,10 @@ body {
     padding: 0;
 }
 
+img {
+    cursor: pointer;
+}
+
 #div_container {
     background-color: #f0f2f5;
     width: 100%;
