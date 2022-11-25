@@ -17,7 +17,7 @@ public interface OrderTableService extends IService<OrderTable> {
      * 根据商品名称查询订单列表
      *
      * @return 返回匹配的列表，没找到就返回一个空列表
-     * @author cheese
+     * @author July
      */
     List<OrderTable> getOrdersByCommodityName(HttpServletRequest request, String commodityName, int pageNum);
 
@@ -26,7 +26,7 @@ public interface OrderTableService extends IService<OrderTable> {
      *
      * @param id
      * @return 返回id对应的Order对象，没有就返回null
-     * @author cheese
+     * @author July
      */
     OrderTable getOrderById(Long id);
 
@@ -35,7 +35,7 @@ public interface OrderTableService extends IService<OrderTable> {
      *
      * @param buyer 买家
      * @return 返回匹配的列表，没找到就返回一个空列表
-     * @author cheese
+     * @author July
      */
     List<OrderTable> getOrdersByBuyer(HttpServletRequest request, String buyer, int pageNum);
 
@@ -48,7 +48,7 @@ public interface OrderTableService extends IService<OrderTable> {
      * @param seller         卖家
      * @param buyer          买家
      * @return boolean表示是否添加成功
-     * @author cheese
+     * @author July
      */
     Boolean addOrder(String commodityName, Integer orderNumber, BigDecimal commodityPrice, String seller, String buyer);
 
@@ -57,7 +57,7 @@ public interface OrderTableService extends IService<OrderTable> {
      *
      * @param id 商品id
      * @return boolean表示是否删除成功
-     * @author cheese
+     * @author July
      */
     Boolean deleteOrderById(Long id);
 
@@ -66,7 +66,7 @@ public interface OrderTableService extends IService<OrderTable> {
      *
      * @param order 修改后的订单对象
      * @return boolean表示是否删除成功
-     * @author cheese
+     * @author July
      */
     Boolean updateOrder(OrderTable order);
 }
