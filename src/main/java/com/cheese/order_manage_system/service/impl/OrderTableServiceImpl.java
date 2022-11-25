@@ -126,7 +126,7 @@ public class OrderTableServiceImpl extends ServiceImpl<OrderTableMapper, OrderTa
         }
         if (orderTime != null) {
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy年MM月dd日  HH:mm:ss", Locale.CHINA);
-            simpleDateFormat.setTimeZone(TimeZone.getTimeZone("Asia / Chongqing"));//不知道为啥
+            simpleDateFormat.setTimeZone(TimeZone.getTimeZone("GMT+08"));
             safetyOrder.setOrderTime(simpleDateFormat.format(orderTime));
         }
         return safetyOrder;
